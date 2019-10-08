@@ -1,0 +1,10 @@
+server:
+  port:9100
+  servlet:
+    context-path: /uaa
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto:none
+
