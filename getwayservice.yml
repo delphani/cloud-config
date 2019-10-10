@@ -12,6 +12,11 @@ zuul:
             path: /customers/** #path that will be intercepted
             url: customerservices #which url the request will be mapped to
             stripPrefix: false #if zuul should replace the "/uaa/" segment
+            
+        accountservices:
+            path: /accounts/** #path that will be intercepted
+            url: accountservices #which url the request will be mapped to
+            stripPrefix: false #if zuul should replace the "/uaa/" segment
 
 hystrix:
     command:
