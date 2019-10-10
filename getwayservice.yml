@@ -10,7 +10,7 @@ zuul:
     routes:
         customerservices:
             path: /customers/** #path that will be intercepted
-            url: customerservices #which url the request will be mapped to
+            url: http://localhost:8104/customers #which url the request will be mapped to
             stripPrefix: false #if zuul should replace the "/uaa/" segment
 
 
