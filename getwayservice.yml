@@ -5,14 +5,14 @@ ribbon:
 zuul:
     ignoredServices: '*'
     host:
-        connect-timeout-millis: 20000
-        socket-timeout-millis: 20000
+        connect-timeout-millis: 50000
+        socket-timeout-millis: 50000
     routes:
         customerservices:
             path: /customers/** #path that will be intercepted
             url: customerservices #which url the request will be mapped to
             stripPrefix: false #if zuul should replace the "/uaa/" segment
-            
+
         accountservices:
             path: /accounts/** #path that will be intercepted
             url: accountservices #which url the request will be mapped to
@@ -24,6 +24,6 @@ hystrix:
             execution:
                 isolation:
                     thread:
-                        timeoutInMilliseconds: 60000
+                        timeoutInMilliseconds: 90000
 server:
     port: 8088
