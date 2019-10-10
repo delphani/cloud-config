@@ -7,6 +7,7 @@ zuul:
     host:
         connect-timeout-millis: 50000
         socket-timeout-millis: 50000
+
     routes:
         customerservices:
             path: /customers/** #path that will be intercepted
